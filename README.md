@@ -33,7 +33,7 @@ This problem is trickier than it seems. However, you should start by writing a s
 4. `Developer.run()` should call `think()` then `eat()` over and over again forever.
 5. `think()` should pick up both spoons before returning.
 6. `eat()` should pause for a random amount of time before putting both spoons down. (Hint: use `usleep()` to pause for a given number of microseconds).
-5. Create 5 `Spoon`s and 5 `Developer`s giving each developer a left and right spoon. Note that developers will of course share spoons. Ever developer's right spoon is the next developer's left spoon.
+5. Create 5 `Spoon`s and 5 `Developer`s giving each developer a left and right spoon. Note that developers will of course share spoons. Every developer's right spoon is the next developer's left spoon.
 6. Call `run()` on each developer in a different queue/thread. You can do this with the following code assuming you put your developers in an array:
 
 ```
@@ -82,7 +82,7 @@ The simple solution above will prevent deadlocks. However, it has some downsides
 
 ### Waiter (Arbitrator) Solution
 
-Another solution is to introduce a waiter to the program. In order to pick up the spoons, a developer must ask the waiter's permission. The waiter will give permission to only one developer at a time until the developer has picked up both fo their spoons. The waiter can be implemented using a mutex.
+Another solution is to introduce a waiter to the program. In order to pick up the spoons, a developer must ask the waiter's permission. The waiter will give permission to only one developer at a time until the developer has picked up both of their spoons. The waiter can be implemented using a mutex.
 
 This approach also has a problem in that it reduces parallelism. In other words, it does not maximize the number of developers simultaneously eating.
 
