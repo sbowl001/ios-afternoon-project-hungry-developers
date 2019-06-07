@@ -21,7 +21,7 @@ After a developer finishes eating, they must put down both spoons, so that other
 
 Assume that there is an unlimited supply of soup for each developer, and that they have infinitely big stomachs. In other words, they can keep eating and thinking forever. One more rule: the developers can't talk to each other. In other words, they can't know when others are waiting to eat or think.
 
-Your goal is to write a program that simulates this scenario.
+Your goal is to write a program that simulates this scenario. A correct solution will run forever with each developer getting regular turns at eating. If the program hangs, or fails to allow a particular to developer to ever get some soup, that's not a working solution.
 
 ## Part One - Write A Solution
 
