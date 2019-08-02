@@ -3,7 +3,7 @@ import UIKit
 class Spoon {
     //    Add an index property to Spoon.
     var index: Int
-    init(_ index: Int) {  //why _?
+    init( index: Int) {   // if add _ index:Int don't need to use 1
         self.index = index
     }
     private var lock = NSLock()
@@ -57,10 +57,12 @@ class Developer {
     }
     
     func run(){
-        while true {
+        print("running...")
+//        while true {
             self.think()
             self.eat()
-        }
+//        }
+        run()
         
       
     }
@@ -79,11 +81,11 @@ class Developer {
  
     //    Create 5 Spoons and 5 Developers giving each developer a left and right spoon. Note that developers will of course share spoons. Every developer's right spoon is the next developer's left spoon.
 //    Give each spoon an index from 1 to 5.
-    var spoon1 = Spoon(1)
-    var spoon2 = Spoon(2)
-    var spoon3 = Spoon(3)
-    var spoon4 = Spoon(4)
-    var spoon5 = Spoon(5)
+var spoon1 = Spoon(index: 1)
+var spoon2 = Spoon(index: 2)
+var spoon3 = Spoon(index: 3)
+var spoon4 = Spoon(index: 4)
+var spoon5 = Spoon(index: 5)
     
     let dev1 = Developer(name: "dev1", leftSpoon: spoon1, rightSpoon: spoon2)
     let dev2 = Developer(name: "dev2", leftSpoon: spoon2, rightSpoon: spoon3)
